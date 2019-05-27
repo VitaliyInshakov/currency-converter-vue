@@ -4,18 +4,22 @@
 
 Демо - https://currency-converter-vue.herokuapp.com/
 
-## Build Setup
+## Project setup
+```
+yarn install
+```
 
-``` bash
-# install dependencies
-npm install
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
 
-# serve with hot reload at localhost:8080
-npm run dev
+### Compiles and minifies for production
+```
+yarn run build
+```
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+### Lints and fixes files
+```
+yarn run lint
 ```
