@@ -5,8 +5,6 @@
     "skipLibCheck": true,
     "strict": true,
     "jsx": "preserve",
-    "lib": ["es5", "dom", "es2017", "es2017.object"],
-    "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
@@ -19,14 +17,22 @@
     "allowJs": true,
     "noImplicitAny": false,
     "baseUrl": ".",
+    "typeRoots": [
+      "./src/declarations"
+    ],
     "types": ["node"],
     "paths": {
-      "*": [
-        "types/*"
-      ],
       "@/*": ["src/*"]
-    }
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.vue"],
+  "exclude": [
+    "node_modules"
+  ]
 }

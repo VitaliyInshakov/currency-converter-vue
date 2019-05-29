@@ -1,8 +1,4 @@
-# vue-currency-converter
-
-Тестовое задание на создание простого приложения конвертера валют с использованием Vue, Vuex и Vue-router
-
-Демо - https://currency-converter-vue.herokuapp.com/
+# currency-convert
 
 ## Project setup
 ```
@@ -19,7 +15,15 @@ yarn run serve
 yarn run build
 ```
 
+### Run your tests
+```
+yarn run test
+```
+
 ### Lints and fixes files
 ```
 yarn run lint
 ```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
