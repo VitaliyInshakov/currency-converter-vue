@@ -23,6 +23,7 @@ module.exports = {
         if (process.env.NODE_ENV === "production") {
             config.resolve.alias
                 .set("vue-router$", "vue-router/dist/vue-router.min.js")
+                .set("vue-resource$", "vue-resource/dist/vue-resource.min.js")
                 .set("vuex$", "vuex/dist/vuex.min.js")
                 .set("vue$", "vue/dist/vue.runtime.min.js");
 

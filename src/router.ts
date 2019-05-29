@@ -10,8 +10,8 @@ export default new Router({
     routes: [
         {
             path: "/",
-            name: "HomePage",
-            component: loadView("HomePage"),
+            name: "Home",
+            component: loadView("Home"),
         },
         {
             path: "/choose-pair",
