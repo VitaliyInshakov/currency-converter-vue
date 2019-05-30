@@ -12,6 +12,7 @@ class ApiService {
         return V.http
             .get(url, request)
             .then((response: HttpResponse) => response.json())
+            .then(jsonResp => ({response: jsonResp, errors: null, status: 201}))
             .catch((error: HttpResponse) => Promise.resolve({response: null, errors: error, status: 422}));
     }
 
