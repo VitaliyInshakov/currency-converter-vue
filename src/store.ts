@@ -7,12 +7,21 @@ import api from "@/lib/api";
 Vue.use(Vuex);
 
 interface State {
-    rates: string[];
+    rates: Rates[];
     hasError: boolean;
     amount: string;
-    exchangeInfo: null | string;
+    exchangeInfo: null | Hash<Rates>;
     history: string[];
 }
+
+export interface Rates {
+    ccy: string;
+    base_ccy: string;
+    buy: string;
+    sale: string;
+}
+
+export type Hash<T = string> = { [key: string]: T };
 
 export default new Vuex.Store<State>({
     state: {
@@ -23,11 +32,17 @@ export default new Vuex.Store<State>({
         history: lockr.get("history") || [],
     },
     mutations: {
-        setRates(state, response: string[]) {
+        setRates(state, response: Rates[]) {
             state.rates = response;
         },
         setAmount(state, amount: string) {
             state.amount = amount;
+        },
+        setError(state) {
+            state.hasError = true;
+        },
+        setExchange(state, payload) {
+            state.exchangeInfo = payload;
         },
     },
     actions: {
@@ -36,10 +51,16 @@ export default new Vuex.Store<State>({
 
             if (errors) {
                 console.error(errors);
+                commit("setError");
+
                 return;
             }
 
             commit("setRates", response);
+        },
+        calculateExchange({state, commit}, { payload, buyOrSale }: {payload: Rates; buyOrSale: string;}) {
+            const { buy, sale, ccy, base_ccy } = payload;
+
         },
     },
 });

@@ -20,8 +20,8 @@ export default new Router({
         },
         {
             path: "/result",
-            name: "ResultPage",
-            component: loadView("ResultPage"),
+            name: "Result",
+            component: loadView("Result"),
         },
     ],
 });
