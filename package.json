@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "postinstall": "npm run build",
+    "start": "node server.js"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -34,12 +36,14 @@
     "eslint-loader": "^2.1.2",
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-vue": "4.7.1",
+    "express": "^4.17.1",
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
+    "serve-static": "^1.14.1",
     "typescript": "^3.4.3",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.32.2",
