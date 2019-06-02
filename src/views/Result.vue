@@ -10,14 +10,14 @@ include ../lib/pugDeps.pug
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 import { State } from "vuex-class";
-import { Hash, Rates } from "../store";
+import { Rates } from "../store";
 
 @Component
 export default class Result extends Vue {
-    @State exchangeInfo!: Hash<Rates>;
+    @State exchangeInfo!: Rates;
 
     get exchangeResult(): string {
-        return "";
+        return `Result: ${this.exchangeInfo.result} ${this.exchangeInfo.tradeType === "buy" ? this.exchangeInfo.base_ccy : this.exchangeInfo.ccy}`;
     }
 }
 </script>
