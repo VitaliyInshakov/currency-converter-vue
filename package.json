@@ -39,7 +39,7 @@
     "express": "^4.17.1",
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
