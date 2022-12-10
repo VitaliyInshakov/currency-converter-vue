@@ -36,7 +36,7 @@
     "eslint-loader": "^2.1.2",
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-vue": "4.7.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",
     "pug": "^2.0.3",
